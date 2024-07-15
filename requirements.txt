@@ -1,0 +1,7 @@
+pandas
+requests
+pytz
+python-amazon-sp-api
+google-auth
+google-auth-oauthlib
+google-api-python-client
