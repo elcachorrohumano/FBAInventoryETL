@@ -1,0 +1,22 @@
+name: run etl pipeline
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+
+jobs:
+  run-docker-container:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: docker build -t etl .
+
+      - name: Run Docker container
+        run: docker run etl
