@@ -6,7 +6,7 @@ import pytz
 
 import pandas as pd
 import requests
-from sp_api.api import Reports, Sales
+from sp_api.api import Reports, Sales, ListingsItems
 from sp_api.base import Marketplaces, ReportType, ProcessingStatus, Granularity
 
 from typing import List
@@ -89,8 +89,20 @@ if __name__ == '__main__':
     print('Succesfully got the sales data')
     sales = pd.DataFrame(data)
 
-    df = pd.merge(inventory, sales, on='asin', how='left')
 
+    skus = list(inventory['sku'])
+    statuses = []
+    for sku in skus:
+        items = ListingsItems(credentials=credentials, marketplace=Marketplaces.UK)
+        res = items.get_listings_item(sellerId='A1VGZFRQE55Z7K', sku=sku)
+        statuses.append({'sku': sku,
+                        'Status': res.payload['summaries'][0]['status']})
+        time.sleep(0.5)
+    print('Succesfully got the statuses')
+    statuses = pd.DataFrame(statuses)
+
+    df = pd.merge(inventory, sales, on='asin', how='left')
+    df = pd.merge(df, statuses, on='sku', how='left')
 
     df.to_csv('reports/data.csv', index=False)
     print('Finished writing the data to reports/data.csv')
@@ -101,7 +113,7 @@ if __name__ == '__main__':
     # Step 2: Select and rename the relevant columns
     df_selected = df[['Product Group', 'product-name', 'sku', 'afn-fulfillable-quantity',
                     'afn-inbound-shipped-quantity', 'afn-inbound-receiving-quantity', 
-                    'afn-inbound-working-quantity', 'unit_count']].copy()
+                    'afn-inbound-working-quantity', 'unit_count', 'Status']].copy()
 
     df_selected.rename(columns={
         'product-name': 'Product',
@@ -132,7 +144,8 @@ if __name__ == '__main__':
                             'Shipped',
                             'Processing',
                             'Total Inventory',
-                            'Units Sold T-30 Days']]
+                            'Units Sold T-30 Days',
+                            'Status']]
     
     df_selected.to_csv('reports/clean_data.csv', index=False)
 
