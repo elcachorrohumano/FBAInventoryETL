@@ -1,4 +1,6 @@
 .DS_Store
+fields.txt
+google_sheets_fields.txt
 
 
 # Byte-compiled / optimized / DLL files
