@@ -29,13 +29,16 @@ product_groups = {
         "Sons Strengthening Shampoo & Conditioner For Men - DHT Blocking Formula For Hair Growth Promotes Strong & Thick Regrowth - Contains Saw Palmetto - Treatment For Hair Loss & Thinning - 3 Month Supply",
         "Sons Strengthening Shampoo & Conditioner For Men - DHT Blocking Formula For Hair Growth Promotes Strong & Thick Regrowth - Contains Saw Palmetto - Treatment For Hair Loss & Thinning - 6 Month Supply",
         "Sons Hair Strengthening Treatment Plan For Hair Loss & Thinning in Men, Saw Palmetto Shampoo and Conditioner For Hair Growth, Thickening Hair Clay with Caffeine & Biotin - 6 Month Supply",
-        "Sons 0.25 Derma Roller - 540 0.25mm Microneedles - Stimulates Collagen Production for Hair Regrowth & Thickening - For Hair Loss & Thinning in Men"
+        "Sons 0.25 Derma Roller - 540 0.25mm Microneedles - Stimulates Collagen Production for Hair Regrowth & Thickening - For Hair Loss & Thinning in Men",
+        "Sons Biotin 900ug Capsules - Hair Growth Vitamin Supplement - Vitamins for Treatment of Men's Hair Loss & Thinning - Promotes Healthier & Stronger Hair - 3x Packs of 30-3 Months Supply"
+
     ],
     "Minoxidil": [
         "Sons Minoxidil 5% Cutaneous Solution, Hair Regrowth & Thickener Formula, For Hair Loss & Thinning in Men, Reactivates Shrunken Follicles, Precision Application System, 1 Month Supply",
         "Sons Minoxidil 5% Cutaneous Solution, Hair Regrowth & Thickener Formula, For Hair Loss & Thinning in Men, Reactivates Shrunken Follicles, Precision Application System, 1 Month Supply",
         "Sons Minoxidil 5% Cutaneous Solution - Hair Regrowth & Thickener Formula - For Hair Loss & Thinning in Men - Reactivates Shrunken Follicles - Precision Application System - 3 Month Supply",
-        "Sons Minoxidil 5% Cutaneous Solution - Hair Regrowth & Thickener Formula - For Hair Loss & Thinning in Men - Reactivates Shrunken Follicles - Precision Application System - 6 Month Supply"
+        "Sons Minoxidil 5% Cutaneous Solution - Hair Regrowth & Thickener Formula - For Hair Loss & Thinning in Men - Reactivates Shrunken Follicles - Precision Application System - 6 Month Supply",
+        "Sons Minoxidil 5% Cutaneous Solution - Hair Regrowth & Thickener Formula - For Male Hair Loss & Thinning - Reactivates Shrunken Follicles - Precision Application - 3 Month Supply in Reduced Packaging"
     ],
     "Bundles w/ Minoxidil": [
         "Sons Complete Hair Loss Treatment - Minoxidil 5%, Biotin, & DHT Blocking Shampoo - Hair Growth Solution for Men's Hair Loss & Thinning - Promotes Strong & Thick Regrowth - 1 Month Supply",

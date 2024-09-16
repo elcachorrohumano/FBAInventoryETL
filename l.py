@@ -34,8 +34,20 @@ def load_df(sheet: str, df: pd.DataFrame):
         values = [df.columns.to_list()] + df.values.tolist()
         body = {"values": values}
 
-        range = f'{sheet}!A2'
-        
+        range_to_clear = f'{sheet}!A1:Z1000'  # Modify the range as needed
+
+        result = (
+            service.spreadsheets()
+                .values()
+                .clear(
+                    spreadsheetId=SPREADSHEET_ID,
+                    range=range_to_clear,
+                )
+                .execute()
+        )
+
+        range = f'{sheet}!A1'
+
         result = (
             service.spreadsheets()
                 .values()
